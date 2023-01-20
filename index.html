@@ -1,0 +1,136 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTO QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- start Quiz button -->
+    <div class="start_btn">
+        <button>Iniciar Quiz</button>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Regras do Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Você tem <span>15 segundos</span> para responder a cada questão.</div>
+            <div class="info">2. Não é possível selecionar uma resposta após o tempo acabar.</div>
+            <div class="info">2. Se nenhuma resposta for selecionada você não pontua.</div>
+            <div class="info">3. Não é possível alterar sua resposta após selecionada.</div>
+            <div class="info">4. Cada questão respondida corretamente vale <span>500 pontos.</span></div>
+            <div class="info">5. Você ganha pontos extras da acordo a velocidade da sua resposta.</div>
+            <div class="info">6. Quem responder mais rápido ganha mais pontos</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair Quiz</button>
+            <button class="restart">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Register Box -->
+    <div class="register_box">
+        <div class="info-title"><span>Cadastro</span></div>
+        <div class="info-list">
+            <form action="" id="contactForm">
+                <div class="inputBox">
+                    <input type="text" id="name" name="name" maxlength="40" placeholder="Seu nome" required />
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" id="cpf" name="cpf" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );"
+                        placeholder="Digite o seu CPF" title="É preciso que seja incluído um CPF válido">
+                </div>
+
+                <div class="inputBox">
+                    <input type="tel" id="phone" name="phone" maxlength="17" placeholder="Seu telefone celular" required>
+                </div>
+
+                <div class="inputBox radio">
+                    <input type="radio" id="profissional" name="profession" value="profissional" required>
+                    <label for="profissional">Profissional</label><br>
+                    <input type="radio" id="academico" name="profession" value="academico" required>
+                    <label for="academico">Acadêmico</label><br>
+                </div>
+                <div class="inputBox lgpd">
+                    <p class="text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id harum quos omnis alias commodi quis
+                        iure illo. Repudiandae est quo qui expedita dignissimos, praesentium maiores velit doloribus
+                        autem libero temporibus?
+                    </p>
+                    <div class="terms">
+                        <input type="checkbox" id="ldgp" name="lgpd" required>
+                        <p>Concordar com os termos acima.</p>
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <button class="submitForm" id="submitButtonId">Aceitar</button>
+                </div>
+            </form>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair do Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Perguntas</div>
+            <div class="timer">
+                <div class="time_left_txt">Tempo</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Próxima</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Você concluiu o Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit" id="quitButton">Enviar Restultado</button>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
